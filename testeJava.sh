@@ -4,7 +4,7 @@ if [ "${VERSION}" ];
 then
 echo "Cliente possui java instalado: ${VERSION}"
 else
-echo "Cliente não possui java instalado"
+echo "Cliente nao possui java instalado"
 fi
 
 java -version
