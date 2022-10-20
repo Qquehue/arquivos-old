@@ -1,4 +1,6 @@
 #!/bin/bash
+sudo apt update && sudo apt upgrade -y
+
 VERSION="$(node -v 2>&1 | grep version | cut -d'"' -f2)"
 
 if [ "${VERSION}" ];
@@ -9,6 +11,8 @@ echo "Cliente nao possui Node instalado"
 fi
 
 if [ $? -eq 0 ];
+then
+    echo "node instalado"
 then
     echo "node instalado"
 else
@@ -22,6 +26,8 @@ else
 fi
 
 mkdir Web.app
+
+cd Web.app
 
 git clone https://github.com/Qquehue/Console-Tech-Consulting.git
 
