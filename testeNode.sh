@@ -1,31 +1,33 @@
 #!/bin/bash
 sudo apt update && sudo apt upgrade -y
-VERSION=”$(node -v 2>&1 | grep version | cut -d’”’ -f2)”
 
-if [ “${VERSION}” ];
+VERSION="$(node -v 2>&1 | grep version | cut -d'"' -f2)"
+
+if [ "${VERSION}" ];
 then
-echo “Cliente possui Node instalado: ${VERSION}”
+echo "Cliente possui Node instalado: ${VERSION}" 
 else
-echo “Cliente não possui Node instalado”
+echo "Cliente nao possui Node instalado"
 fi
 
 if [ $? -eq 0 ];
 then
-echo “node instalado”
+    echo "node instalado"
 else
-echo “node nao instalado”
-echo “gostaria de instalar o node? (s/n)”
-read inst
-if [ \”$inst\” == \”s\” ];
-then
-sudo apt install nodejs -y
+    echo "node nao instalado"
+    echo "gostaria de instalar o node? (s/n)"
+    read inst
+    if [ \"$inst\" == \"s\" ];
+    then
+        sudo apt install nodejs -y
+    fi
 fi
-fi
+
 mkdir Web.app
 
 cd Web.app
 
-git clone "https://github.com/Qquehue/Console-Tech-Consulting.git"
+git clone https://github.com/Qquehue/Console-Tech-Consulting.git
 
 cd Console-Tech-Consulting
 
