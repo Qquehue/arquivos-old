@@ -1,6 +1,4 @@
 #!/bin/bash
-sudo apt update && sudo apt upgrade -y
-
 VERSION="$(node -v 2>&1 | grep version | cut -d'"' -f2)"
 
 if [ "${VERSION}" ];
@@ -24,8 +22,6 @@ else
 fi
 
 mkdir Web.app
-
-cd Web.app
 
 git clone https://github.com/Qquehue/Console-Tech-Consulting.git
 

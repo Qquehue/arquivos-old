@@ -25,10 +25,6 @@ cd /home/ubuntu/Desktop
 
 git clone https://github.com/Qquehue/Console-Tech-Consulting.git
 
-cd Console-Tech-Consulting
-
-cd API/local-app
-
-cd target
+cd Console-Tech-Consulting/API/local-app/target
 
 java -jar local-app-1.0-SNAPSHOT-jar-with-dependencies.jar
