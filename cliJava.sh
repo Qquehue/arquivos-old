@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /home/arquivos-sh/java
+cd /home/ubuntu/arquivos-sh/java
 
 sudo docker build -t dockerfile .
 sudo docker run -d -t --name ctc-cli dockerfile
